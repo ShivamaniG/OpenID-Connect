@@ -33,8 +33,8 @@ This setup allows:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/nextcloud-keycloak-oidc-integration.git
-cd nextcloud-keycloak-oidc-integration
+git clone https://github.com/ShivamaniG/OpenID-Connect.git
+cd OpenID-Connect
 ````
 
 ### 2. Docker Setup
@@ -71,7 +71,6 @@ docker-compose up -d
    * Valid Redirect URI: `http://localhost:8082/*`
    * Post Logout Redirect URI: `http://localhost:8082`
    * Web Origins: `*`
-5. Create test users (e.g. `user1`, `user2`) and set passwords.
 
 ---
 
@@ -84,10 +83,6 @@ docker-compose up -d
 
    * Authorize URL: `http://localhost:8080/realms/nextcloud/protocol/openid-connect/auth?prompt=login`
    * Token URL: `http://keycloak:8080/realms/nextcloud/protocol/openid-connect/token`
-   * User Info URL: `http://keycloak:8080/realms/nextcloud/protocol/openid-connect/userinfo`
-   * Logout URL: `http://localhost:8080/realms/nextcloud/protocol/openid-connect/logout?redirect_uri=http://localhost:8082`
-
-✅ On first login with a Keycloak user, Nextcloud will automatically create the user account.
 
 ---
 
@@ -100,46 +95,9 @@ docker-compose up -d
 docker-compose up -d
 ```
 
-3. Visit the services:
-
-   * Keycloak: [http://localhost:8080](http://localhost:8080)
-   * Nextcloud: [http://localhost:8082](http://localhost:8082)
-
----
-
-## 🧼 Stopping and Cleaning Up
-
-To stop the containers:
-
-```bash
-docker-compose down
-```
-
-To stop and remove volumes (clean reset):
-
-```bash
-docker-compose down -v
-```
-
----
-
-## 📌 Notes
-
-* Make sure to set passwords for all users in Keycloak and verify their emails.
-* For a production setup, replace `localhost` with actual domains and use HTTPS.
-* You can monitor user sessions and login logs directly in the Keycloak admin console.
-
----
-
 ## 👨‍💻 Author
 
 **Shivamani G**
-IIITDM Kurnool — Final Year CSE
-GitHub: [github.com/<your-username>](https://github.com/<your-username>)
+IIITDM Kurnool — UG CSE
+GitHub: [github.com/ShivamaniG](https://github.com/ShivamaniG)
 
----
-
-```
-
-Let me know if you'd also like a `.gitignore` file and a sample `docker-compose.yml` in the repo, or help publishing it to GitHub Pages for docs!
-```
