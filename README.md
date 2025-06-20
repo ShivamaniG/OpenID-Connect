@@ -1,10 +1,3 @@
-Sure! Here's a complete `README.md` tailored for your **Nextcloud + Keycloak integration using Docker and OIDC**, including Docker setup, project overview, setup instructions, and how to run the system.
-
----
-
-### ✅ `README.md`
-
-````markdown
 # Nextcloud + Keycloak OIDC Integration
 
 This project demonstrates how to integrate **Nextcloud** with **Keycloak** using **OpenID Connect (OIDC)** for secure, centralized Single Sign-On (SSO) authentication. It uses Docker to containerize and run both services.
